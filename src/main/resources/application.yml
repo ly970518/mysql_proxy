@@ -1,0 +1,27 @@
+server:
+  port: 8001
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    master:
+      url: jdbc:mysql://121.40.242.200:13310/backend?useSSL=false&useUnicod=true&characterEncoding=utf8
+      username: root
+      password: Kfdi&8#6%d
+    slave:
+      url: jdbc:mysql://121.40.242.200:13310/backend?useSSL=false&useUnicod=true&characterEncoding=utf8
+      username: root
+      password: Kfdi&8#6%d
+  freemarker:
+    template-loader-path: classpath:/templates
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
